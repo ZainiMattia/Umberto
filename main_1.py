@@ -49,4 +49,63 @@ print(x)
 print(y)
 print(z)
 
-main_1.py
+#funzione print
+x = "Python is awesome"
+print(x)
+
+#print che stampa più variabili
+x = "Python"
+y = "is"
+z = "awesome"
+print(x, y, z)
+
+#print con il +
+x = "Python "
+y = "is "
+z = "awesome"
+print(x + y + z)
+
+#+ con operazioni matematiche 
+x = 5
+y = 10
+print(x + y)
+
+#+ non si può fare con "type" diversi 
+x = 5
+y = "John"
+print(x + y)
+
+# "," stampa tutti i "type"
+x = 5
+y = "John"
+print(x, y)
+
+#global variables (variabile fuori dalla funzione ma utilizzabile al suo interno)
+x = "awesome"
+def myfunc():
+  print("Python is " + x)
+myfunc()
+
+#variabile nella funzione con lo stesso nome di quella fuori (stamperà entrambe)
+x = "awesome"
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+myfunc()
+print("Python is " + x)
+
+#global Keyword  (creo una variabile all'interno della funzione e la posso stampare crazie a "global x" )
+def myfunc():
+  global x
+  x = "fantastic"
+myfunc()
+print("Python is " + x)
+
+
+# se ho la stessa variabile sia dentro che fuori, "global x" andrà a far scegliere il contenuto della variabile all'interno della funzione 
+x = "awesome"
+def myfunc():
+  global x
+  x = "fantastic"
+myfunc()
+print("Python is " + x) 
